@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - PerelloWebAPP
+name: Build and deploy PHP app to Azure Web App - PerelloWebApp
 
 on:
   push:
@@ -64,15 +64,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E24844DEDC944F16BB7BF3BC77F9401B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_09CCA347D6B5420399B8597462273B7E }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_90D880BE6562439F801CCA69B2C0BF65 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_63C56B8C5D704295BDC15F486A79B80A }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_51613F675B5047EA821F676B35531950 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D2522F09C4E2411EBBF57A9B0DE153B7 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'PerelloWebAPP'
+          app-name: 'PerelloWebApp'
           slot-name: 'Production'
           package: .
           
